@@ -1,12 +1,9 @@
-
+version: "3.8"
 
 services:
-  app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: ocr_app
+  php_ocr_app:
+    build: .
     ports:
-      - "8000:8000"
+      - "8000:80"
     volumes:
       - .:/var/www/html
